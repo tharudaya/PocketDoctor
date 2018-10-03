@@ -1,0 +1,306 @@
+
+<html>
+    <head>
+        <title>Pocket Docter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+        <style>
+
+            .top1{
+
+                background-color: #404040;
+                height: 15px ; 
+
+            }
+
+            .top2{
+
+                background-color: #404040;
+                height: 50px ; 
+            }
+
+            .top2 a{
+
+                color: white;
+                margin-top:  0px ;
+                margin-left: 0px ;
+                border-right: solid white 1px;
+                outline: none;
+                padding: 14px 16px;               
+                cursor: pointer;
+                font-size: 15px;
+
+            }
+
+            .top2 a:hover{
+
+                text-decoration: none ;
+                background-color: green ;
+            }
+            .header img{
+
+                margin-left: 20% ;
+
+            }
+            .left img{
+
+                height: 650px ;
+                width: 270px ;
+               
+
+            }
+
+            .right img {
+
+                height: 290px ;
+                width: 380px ;
+            }
+
+            .about {
+
+
+                text-align: left ;
+            }
+
+
+
+            .reg {
+
+                width:350px ;
+                margin-top: 30px;
+                margin-left: 90px ;
+                display:block;
+                text-align: left ;
+
+            }
+
+            input {
+
+                display: block ;
+                width: 100% ;
+                padding: 5px ;
+                -webkit-box-sizing: border-box ;
+                -moz-box-sizing :border-box ;
+                box-sizing:border-box ;
+
+
+            }
+
+            div.reg button {
+
+                width: 150px;
+                padding: 5px ;
+                color: white;
+                font-size: 17px ;
+                background-color:#0066ff;
+                border-radius: 5px ;
+            }
+
+
+            a {
+
+                font-style: normal ;
+                float: left ;
+                margin-right: 40px ;
+                margin-top: 20px ;
+                margin-left: 30px ;
+
+
+            }
+
+
+            button {
+
+                margin-top: 10px ;
+
+            }
+
+            .green{
+
+                color: green ;
+            }
+
+            footer {
+                background-color: #8c8c8c;
+                padding: 25px;
+            }
+
+            .foot1{
+
+                border-right: 2px solid grey ;
+                height: 140px ;
+            }
+
+            .foot2{
+
+                margin-left: 50px ; 
+            }
+
+            .foot3{
+
+                margin-left: 40px;
+                margin-bottom: 25px ;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="top1"></div>
+        <div class="header">
+            <img src="images/logo.jpg"></div>
+        <div class="top2">
+
+            <li><a href="index.html">Home</a></li>
+
+        </div>
+        <hr>
+
+        <div class="container-fluid text-center">    
+            <div class="row content">
+                <div class="col-sm-3 sidenav">
+                    <div class="left">
+                        <div class="well">
+                            <img src="images/login_a.jpg">
+                        </div></div>
+
+                </div>
+
+
+                <div class="col-sm-5 text-center"> 
+                    <h1>Register Here</h1>
+                    <div id="reg"  class="reg">
+
+                        <fieldset>
+                            <p>
+                                <label for="">Full Name :</label>
+                                <input type="text" name="fullname" id="fullname" placeholder="Enter fullname " required="">
+                            </p>
+
+                            <p>
+                                <label for="">Medical Id No :</label>
+                                <input type="text" name="medical_id" id="medical_id" placeholder="Enter Medical Id number" required="">
+                            </p>
+                            
+                            <p>
+                                <label for="">City :</label>
+                                <input type="text" name="city" id="city" placeholder="Enter Your City" required="">
+                            </p>
+                            
+                            <p>
+                                <label for="">Age :</label>
+                                <input type="text" name="age" id="age" placeholder="Enter Your Age" required="">
+                            </p>
+                            
+                            <p>
+                                <label for="">Specialization :</label>
+                                <input type="text" name="s_area" id="s_area" placeholder="Enter Your Specialized Area" required="">
+                            </p>
+                            
+                             <p>
+                                <label for="">Mobile No:</label>
+                                <input type="tel" name="m_number" id="m_number" placeholder="Enter Your Mobile Number" required="">
+                            </p>
+
+                            <p>
+                                <label for="">Username:</label>
+                                <input type="text" name="username" id="email_field" placeholder="Enter Your Email Address " required="">
+                            </p>
+
+                            <p>
+                                <label for="">Password :</label>
+                                <input type="password" name="password" id="password_field" placeholder="Enter Your Password" required="">
+                            </p> 
+                            <p>
+                                <label for="">Confirm Password :</label>
+                                <input type="password" name="c_password" id="c_password_field" placeholder="Retype Password" required="">
+                            </p> 
+
+                            <p>
+                                <a href="login.html">Back to login</a><button onclick="mysave()" type="submit" name="submit">Register</button>
+                            </p>
+
+                        </fieldset>
+
+                    </div>
+
+
+<!--                    <div class="about">
+                        <hr>
+                        <h3 class="green">Our Mission</h3>
+                        <p>provide best facilities to doctors who have already joined with Pocket Doctor to do their work more efficiently.</p>
+                        <p>You can join with us and share your knowledge and help them by giving advices .</p>
+                    </div> -->
+                </div>
+
+
+                <div class="col-sm-4 sidenav">
+
+
+                    <div class="well">
+                        <div class="right">
+                            <img src="images/login_c.jpg">
+                        </div>
+                    </div>
+                    <div class="well">
+                        <div class="right">
+                            <img src="images/login_b.jpg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <footer class="container-fluid">
+
+            <div class="foot1 col-sm-4 text-center">Connect with us<br><br><img src="images/others.png">  </div> 
+        </div>
+
+        <div class="foot2 col-sm-3">
+
+            <h4>Official Address</h4>
+            Health Care Lanka (Pvt) Ltd,<br>
+            295/1,<br>
+            Thilakarathne Mawatha,<br>
+            Colombo 03 ,<br>
+            Sri Lanka.<br>  
+        </div>
+
+        <div class="foot3 col-sm-4"> 
+            Hotline : +94 71 9538268 <img src="images/viber.png">&nbsp;<img src="images/whatsapp.png"><br> 
+            <br>Telephone     : +94 71 2902834 , +94 70 2130370<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;+94 71 1595521 , +94 71 4795834<br>                             
+            <br>e-mail   : uwucst@gmail.com<br>                         
+        </div>
+
+        <div class="text-right"><p><br>@2018 All Rights Reserved(UWU_CST)</p>
+        </div>
+    </footer>  
+
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+                                    // Initialize Firebase
+                                    var config = {
+                                        apiKey: "AIzaSyDqimShTJ0HOLkvIBmKRY4Cs2guI6XvTpo",
+                                        authDomain: "pocket-doctor-73480.firebaseapp.com",
+                                        databaseURL: "https://pocket-doctor-73480.firebaseio.com",
+                                        projectId: "pocket-doctor-73480",
+                                        storageBucket: "pocket-doctor-73480.appspot.com",
+                                        messagingSenderId: "720610702013"
+                                    };
+                                    firebase.initializeApp(config);
+</script>
+<script src="register.js"></script>   
+</html>

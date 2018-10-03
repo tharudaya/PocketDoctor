@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pocket Doctor</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .top{
+
+                background-color:#404040;
+                height: 15px ;
+
+            }
+            
+            .carousel-indicators {
+                
+              margin-left: -450px ;
+                
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .nav {
+                float: left;
+                border-right:1px solid #bbb;
+            }
+
+            li:last-child {
+                border-right: none;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 18px 20px;
+                text-decoration: none;
+            }
+
+            li a:hover{
+
+                text-decoration: none ;
+                color: white ;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+
+            }
+
+            .active {
+                background-color: #4CAF50;
+            }
+
+            .btn{
+
+                color: black ;
+                margin-top: -8px ;            
+
+            }
+
+            .login{
+
+                text-align:center ;
+                color: white ;
+            }
+
+            .header img{
+
+                margin-left: 20% ;
+
+            }
+            
+            .green{
+            
+                color: green ;
+            }
+            
+            .services li{
+                
+                margin-left: 50px ;
+                margin-bottom: 10px ;
+               
+            }
+
+            /* Add a gray background color and some padding to the footer */
+            footer {
+                background-color: #8c8c8c;
+                padding: 25px;
+            }
+
+            .carousel-inner img {
+                width: 100%; /* Set width to 100% */
+                margin: auto;
+                min-height:200px;
+            }
+
+            .foot1{
+
+                border-right: 2px solid grey ;
+                height: 140px ;
+            }
+
+            .foot2{
+
+                margin-left: 50px ; 
+            }
+
+            .foot3{
+
+                margin-left: 40px;
+                margin-bottom: 25px ;
+            }
+
+
+            /* Hide the carousel text when the screen is less than 600 pixels wide */
+            @media (max-width: 600px) {
+                .carousel-caption {
+                    display: none; 
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="top"></div>
+        <div class="header">
+            <img src="images/logo.jpg"></div>
+        <div class="top">
+            <ul>
+                <li class="nav"><a href="index.html">Home</a></li>
+                <li class="nav"><a class="active" href="about.html">About Us</a></li>
+                
+            </ul> </div><br>
+
+
+
+
+
+
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+
+
+
+
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/main2.jpg" alt="Image">
+                    <div class="carousel-caption">        
+                    </div>      
+                </div>
+
+                <div class="item">
+                    <img src="images/main5.jpg" alt="Image">
+                    <div class="carousel-caption">
+                    </div>      
+                </div>
+
+                <div class="item">
+                    <img src="images/main4.jpg" alt="Image">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/main1.jpg" alt="Image">
+                    <div class="carousel-caption">
+                    </div> 
+                </div>
+
+
+
+
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="container">    
+            <h3 class="green text-center">About Us</h3><h4>Health care is the maintenance or improvement of health via the prevention, 
+                            diagnosis, and treatment of disease, illness, injury, and other physical and
+                            mental impairments in human beings.This website provide facilities to doctors who have already joined with us.
+                            So You also can join with us and share your knowledge with patients.
+                            You can directly chat with patients and give your advices.This website supports for you to upload articles easily,chat with
+                            patients and manage tips easily.Now you can register to 
+                            the most popular online blood report analysis website in sri lanaka.</h4>
+            <div class="row">
+                <hr>
+                 <div class="col-sm-8">
+                     <h3 class="green">Why can you trust us</h3>
+                     <h4>The information on this website is designed to help patients 
+                         and carers better understand the many clinical laboratory 
+                         tests that are a vital part of medical care and is written
+                         by practising Sri Lankan doctors. Our website does not host any form of commercial
+                         advertising.</h4>
+                     <h3 class="green">Our Services</h3>
+                     <h4 class="services">
+                             <li>Chat with patients</li>
+                             <li>Post Ads</li>
+                             <li>Manage Ads</li>
+                             
+                         </h4>
+                     <hr>
+                     <p class="text-center"> Number 01 Blood Reports analysis website in Sri Lanka</p>
+                     <h4 class="green text-center">Pocket Doctor</h4>
+                </div>
+                
+                <div class="col-sm-4"> 
+                    <img src="images/about.jpg" class="img-responsive" style="width:100%" alt="Image">
+                        
+                </div>
+
+            </div>
+        </div><br>
+
+
+        <footer class="container-fluid">
+
+            <div class="foot1 col-sm-4 text-center">Connect with us<br><br><img src="images/others.png">  </div> 
+            </div>
+
+            <div class="foot2 col-sm-3">
+                
+                <h4>Official Address</h4>
+                Health Care Lanka (Pvt) Ltd,<br>
+                295/1,<br>
+                Thilakarathne Mawatha,<br>
+                Colombo 03 ,<br>
+                Sri Lanka.<br>  
+            </div>
+
+            <div class="foot3 col-sm-4"> 
+                Hotline : +94 71 9538268 <img src="images/viber.png">&nbsp;<img src="images/whatsapp.png"><br> 
+                <br>Telephone     : +94 71 2902834 , +94 70 2130370<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;+94 71 1595521 , +94 71 4795834<br>                             
+                <br>e-mail   : uwucst@gmail.com<br>                         
+            </div>
+
+            <div class="text-right"><p><br>@2018 All Rights Reserved(UWU_CST)</p>
+                </div>
+        </footer>  
+
+    </body>
+</html>
